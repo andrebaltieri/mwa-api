@@ -18,7 +18,11 @@ namespace ModernWebStore.Infra.Persistence.Map
 
             Property(x => x.Password)
                 .HasMaxLength(32)
-                .IsFixedLength();
+                .IsFixedLength()
+                .IsRequired();
+
+            Property(x => x.IsAdmin)
+                .IsRequired();
         }
     }
 }

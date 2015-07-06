@@ -17,7 +17,7 @@ namespace ModernWebStore.ApplicationService
 
         public User Register(RegisterUserCommand command)
         {
-            var user = new User(command.Email, command.Password);
+            var user = new User(command.Email, command.Password, command.IsAdmin);
             user.Register();
             _repository.Register(user);
 

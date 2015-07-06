@@ -1,4 +1,5 @@
-﻿using ModernWebStore.Domain.Commands.UserCommands;
+﻿using ModernWebStore.Api.Security;
+using ModernWebStore.Domain.Commands.UserCommands;
 using ModernWebStore.Domain.Services;
 using System.Net;
 using System.Net.Http;
@@ -7,11 +8,11 @@ using System.Web.Http;
 
 namespace ModernWebStore.Api.Controllers
 {
-    public class ValuesController : BaseController
+    public class UserController : BaseController
     {
         private readonly IUserApplicationService _service;
 
-        public ValuesController(IUserApplicationService service)
+        public UserController(IUserApplicationService service)
         {
             this._service = service;
         }
@@ -22,7 +23,8 @@ namespace ModernWebStore.Api.Controllers
         {
             var command = new RegisterUserCommand(
                 email: (string)body.email,
-                password: (string)body.password
+                password: (string)body.password,
+                isAdmin: (bool)body.isAdmin
             );
 
             var user = _service.Register(command);
