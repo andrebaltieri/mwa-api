@@ -43,6 +43,7 @@
     <Compile Include="Events\Contracts\IDomainEvent.cs" />
     <Compile Include="Events\DomainEvent.cs" />
     <Compile Include="Events\DomainNotification.cs" />
+    <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="IContainer.cs" />
     <Compile Include="IHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

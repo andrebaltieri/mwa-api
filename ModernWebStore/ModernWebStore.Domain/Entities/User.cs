@@ -1,4 +1,5 @@
 ﻿using ModernWebStore.Domain.Scopes;
+using ModernWebStore.SharedKernel.Helpers;
 using System;
 
 namespace ModernWebStore.Domain.Entities
@@ -10,7 +11,7 @@ namespace ModernWebStore.Domain.Entities
         public User(string email, string password, bool isAdmin)
         {
             this.Email = email;
-            this.Password = password;
+            this.Password = StringHelper.Encrypt(password);
             this.IsAdmin = isAdmin;
         }
 

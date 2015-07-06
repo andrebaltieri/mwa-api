@@ -14,14 +14,14 @@ namespace ModernWebStore.Domain.Scopes
             );
         }
 
-        public static bool AuthenticateUserScopeIsValid(this User user, string email, string password)
+        public static bool AuthenticateUserScopeIsValid(this User user, string email, string encryptedPassword)
         {
             return AssertionConcern.IsSatisfiedBy
             (
                 AssertionConcern.AssertNotEmpty(email, "O usuário é obrigatório"),
-                AssertionConcern.AssertNotEmpty(password, "A senha é obrigatória"),
+                AssertionConcern.AssertNotEmpty(encryptedPassword, "A senha é obrigatória"),
                 AssertionConcern.AssertAreEquals(user.Email, email, "Usuário ou senha inválidos"),
-                AssertionConcern.AssertAreEquals(user.Password, password, "Usuário ou senha inválidos")
+                AssertionConcern.AssertAreEquals(user.Password, encryptedPassword, "Usuário ou senha inválidos")
             );
         }
     }

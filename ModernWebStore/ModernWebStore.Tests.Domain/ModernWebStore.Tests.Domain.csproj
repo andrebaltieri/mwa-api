@@ -59,6 +59,10 @@
       <Project>{13edc3e0-a443-4320-9930-45bc42e632c5}</Project>
       <Name>ModernWebStore.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ModernWebStore.SharedKernel\ModernWebStore.SharedKernel.csproj">
+      <Project>{dece94cb-9512-4e89-a487-2c36a8581706}</Project>
+      <Name>ModernWebStore.SharedKernel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

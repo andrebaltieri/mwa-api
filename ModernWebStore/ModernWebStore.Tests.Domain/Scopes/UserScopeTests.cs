@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ModernWebStore.Domain.Entities;
 using ModernWebStore.Domain.Scopes;
+using ModernWebStore.SharedKernel.Helpers;
 
 namespace ModernWebStore.Tests.Domain.Scopes
 {
@@ -37,7 +38,8 @@ namespace ModernWebStore.Tests.Domain.Scopes
         [TestCategory("User Scopes - Authenticate")]
         public void ShouldAuthenticateUser()
         {
-            Assert.AreEqual(true, UserScopes.AuthenticateUserScopeIsValid(_validUser, "andrebaltieri@hotmail.com", "123456"));
+            var isValid = UserScopes.AuthenticateUserScopeIsValid(_validUser, "andrebaltieri@hotmail.com", StringHelper.Encrypt("123456"));
+            Assert.AreEqual(true, isValid);
         }
 
         [TestMethod]
