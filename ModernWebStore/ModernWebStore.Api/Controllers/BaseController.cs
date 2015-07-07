@@ -23,7 +23,7 @@ namespace ModernWebStore.Api.Controllers
             if (Notifications.HasNotifications())
                 ResponseMessage = Request.CreateResponse(HttpStatusCode.BadRequest, new { errors = Notifications.Notify() });
             else
-                ResponseMessage = Request.CreateResponse(HttpStatusCode.OK, result);
+                ResponseMessage = Request.CreateResponse(code, result);
 
             return Task.FromResult<HttpResponseMessage>(ResponseMessage);
         }

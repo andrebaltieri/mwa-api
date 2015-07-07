@@ -29,7 +29,7 @@ namespace ModernWebStore.Api.Controllers
 
             var user = _service.Register(command);
 
-            return CreateResponse(HttpStatusCode.OK, user);
+            return CreateResponse(HttpStatusCode.Created, user);
         }
     }
 }

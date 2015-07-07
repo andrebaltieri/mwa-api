@@ -22,8 +22,10 @@ namespace ModernWebStore.CrossCutting
             container.RegisterType<StoreDataContext, StoreDataContext>(new HierarchicalLifetimeManager());
             container.RegisterType<IUnitOfWork, UnitOfWork>(new HierarchicalLifetimeManager());
             container.RegisterType<IUserRepository, UserRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<ICategoryRepository, CategoryRepository>(new HierarchicalLifetimeManager());
 
             container.RegisterType<IUserApplicationService, UserApplicationService>(new HierarchicalLifetimeManager());
+            container.RegisterType<ICategoryApplicationService, CategoryApplicationService>(new HierarchicalLifetimeManager());
 
             container.RegisterType<IHandler<DomainNotification>, DomainNotificationHandler>(new HierarchicalLifetimeManager());
         }

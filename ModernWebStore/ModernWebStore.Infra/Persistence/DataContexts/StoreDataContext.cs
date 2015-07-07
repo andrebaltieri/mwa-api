@@ -14,10 +14,12 @@ namespace ModernWebStore.Infra.Persistence.DataContexts
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new UserMap());
+            modelBuilder.Configurations.Add(new CategoryMap());
         }
     }
 }
