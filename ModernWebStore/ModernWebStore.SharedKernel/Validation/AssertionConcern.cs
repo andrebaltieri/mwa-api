@@ -63,5 +63,23 @@ namespace ModernWebStore.SharedKernel.Validation
             return (!(value == match)) ?
                 new DomainNotification("AssertArgumentTrue", message) : null;
         }
+
+        public static DomainNotification AssertIsGreaterThan(int value1, int value2, string message)
+        {
+            return (!(value1 > value2)) ?
+                new DomainNotification("AssertArgumentTrue", message) : null;
+        }
+
+        public static DomainNotification AssertIsGreaterThan(decimal value1, decimal value2, string message)
+        {
+            return (!(value1 > value2)) ?
+                new DomainNotification("AssertArgumentTrue", message) : null;
+        }
+
+        public static DomainNotification AssertIsGreaterOrEqualThan(int value1, int value2, string message)
+        {
+            return (!(value1 >= value2)) ?
+                new DomainNotification("AssertArgumentTrue", message) : null;
+        }
     }
 }

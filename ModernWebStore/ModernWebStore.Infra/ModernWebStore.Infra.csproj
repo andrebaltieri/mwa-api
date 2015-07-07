@@ -52,10 +52,12 @@
     <Compile Include="Persistence\DataContexts\StoreDataContext.cs" />
     <Compile Include="Persistence\IUnitOfWork.cs" />
     <Compile Include="Persistence\Map\CategoryMap.cs" />
+    <Compile Include="Persistence\Map\ProductMap.cs" />
     <Compile Include="Persistence\Map\UserMap.cs" />
     <Compile Include="Persistence\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup />
