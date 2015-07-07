@@ -38,7 +38,7 @@ namespace ModernWebStore.Api.Controllers
         [HttpGet]
         //[Authorize]
         [Route("api/categories/{id}")]
-        public Task<HttpResponseMessage> Get(Guid id)
+        public Task<HttpResponseMessage> Get(int id)
         {
             var category = _service.Get(id);
             return CreateResponse(HttpStatusCode.Created, category);
@@ -60,7 +60,7 @@ namespace ModernWebStore.Api.Controllers
         [HttpPut]
         //[Authorize]
         [Route("api/categories/{id}")]
-        public Task<HttpResponseMessage> Put(Guid id, [FromBody]dynamic body)
+        public Task<HttpResponseMessage> Put(int id, [FromBody]dynamic body)
         {
             var command = new EditCategoryCommand(
                 id: id,
@@ -74,7 +74,7 @@ namespace ModernWebStore.Api.Controllers
         [HttpDelete]
         //[Authorize]
         [Route("api/categories/{id}")]
-        public Task<HttpResponseMessage> Delete(Guid id)
+        public Task<HttpResponseMessage> Delete(int id)
         {
             var category = _service.Delete(id);
             return CreateResponse(HttpStatusCode.OK, category);

@@ -15,7 +15,7 @@ namespace ModernWebStore.Domain.Entities
             this.IsAdmin = isAdmin;
         }
 
-        public Guid Id { get; private set; }
+        public int Id { get; private set; }
         public string Email { get; private set; }
         public string Password { get; private set; }
         public bool IsAdmin { get; private set; }

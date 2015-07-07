@@ -1,5 +1,4 @@
 ﻿using ModernWebStore.Domain.Scopes;
-using System;
 
 namespace ModernWebStore.Domain.Entities
 {
@@ -12,7 +11,7 @@ namespace ModernWebStore.Domain.Entities
             this.Title = title;
         }
 
-        public Guid Id { get; private set; }
+        public int Id { get; private set; }
         public string Title { get; private set; }  
         
         public void Register()

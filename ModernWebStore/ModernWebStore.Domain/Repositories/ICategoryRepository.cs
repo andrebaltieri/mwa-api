@@ -1,5 +1,4 @@
 ﻿using ModernWebStore.Domain.Entities;
-using System;
 using System.Collections.Generic;
 
 namespace ModernWebStore.Domain.Repositories
@@ -8,7 +7,7 @@ namespace ModernWebStore.Domain.Repositories
     {
         List<Category> Get();
         List<Category> Get(int skip, int take);
-        Category Get(Guid id);
+        Category Get(int id);
         void Create(Category category);
         void Update(Category category);
         void Delete(Category category);

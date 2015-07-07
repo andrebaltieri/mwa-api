@@ -1,5 +1,4 @@
 ﻿using ModernWebStore.Domain.Entities;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
 namespace ModernWebStore.Infra.Persistence.Map
@@ -10,7 +9,7 @@ namespace ModernWebStore.Infra.Persistence.Map
         {
             ToTable("User");
 
-            Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            HasKey(x => x.Id);
 
             Property(x => x.Email)
                 .HasMaxLength(160)

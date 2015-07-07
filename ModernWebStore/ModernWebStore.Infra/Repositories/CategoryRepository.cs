@@ -1,7 +1,6 @@
 ﻿using ModernWebStore.Domain.Entities;
 using ModernWebStore.Domain.Repositories;
 using ModernWebStore.Infra.Persistence.DataContexts;
-using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -32,9 +31,9 @@ namespace ModernWebStore.Infra.Repositories
             return _context.Categories.ToList();
         }
 
-        public Category Get(Guid id)
+        public Category Get(int id)
         {
-            return _context.Categories.Where(x => x.Id == id).FirstOrDefault();
+            return _context.Categories.Find(id);
         }
 
         public List<Category> Get(int skip, int take)

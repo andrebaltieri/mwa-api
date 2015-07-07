@@ -9,9 +9,9 @@ namespace ModernWebStore.Domain.Services
     {
         List<Category> Get();
         List<Category> Get(int skip, int take);
-        Category Get(Guid id);
+        Category Get(int id);
         Category Create(CreateCategoryCommand command);
         Category Update(EditCategoryCommand command);
-        Category Delete(Guid id);
+        Category Delete(int id);
     }
 }

@@ -29,7 +29,7 @@ namespace ModernWebStore.ApplicationService
             return null;
         }
 
-        public Category Delete(Guid id)
+        public Category Delete(int id)
         {
             var category = _repository.Get(id);
             _repository.Delete(category);
@@ -45,7 +45,7 @@ namespace ModernWebStore.ApplicationService
             return _repository.Get();
         }
 
-        public Category Get(Guid id)
+        public Category Get(int id)
         {
             return _repository.Get(id);
         }
