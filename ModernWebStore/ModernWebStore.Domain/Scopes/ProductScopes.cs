@@ -21,7 +21,7 @@ namespace ModernWebStore.Domain.Scopes
         {
             return AssertionConcern.IsSatisfiedBy
             (
-                AssertionConcern.AssertIsGreaterThan(amount, 0, "A quantidade deve ser maior que zero")
+                AssertionConcern.AssertIsGreaterOrEqualThan(amount, 0, "A quantidade deve ser maior que zero")
             );
         }
 

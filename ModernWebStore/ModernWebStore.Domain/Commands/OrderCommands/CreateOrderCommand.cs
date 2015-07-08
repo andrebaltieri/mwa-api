@@ -1,17 +1,14 @@
-﻿using ModernWebStore.Domain.Entities;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace ModernWebStore.Domain.Commands.OrderCommands
 {
     public class CreateOrderCommand
     {
-        public CreateOrderCommand(IList<OrderItem> orderItems, int userId)
+        public CreateOrderCommand(IList<CreateOrderItemCommand> orderItems)
         {
             this.OrderItems = orderItems;
-            this.UserId = userId;
         }
 
-        public IList<OrderItem> OrderItems { get; set; }
-        public int UserId { get; set; }
+        public IList<CreateOrderItemCommand> OrderItems { get; set; }
     }
 }

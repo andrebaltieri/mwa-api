@@ -14,5 +14,15 @@ namespace ModernWebStore.Domain.Scopes
                 AssertionConcern.AssertIsGreaterThan(orderItem.Quantity, 0, "Quantidade inválida")
             );
         }
+
+        public static bool AddProductScopeIsValid(this OrderItem orderItem, Product product, decimal price, int quantity)
+        {
+            return AssertionConcern.IsSatisfiedBy
+            (
+                AssertionConcern.AssertIsGreaterOrEqualThan((product.QuantityOnHand - quantity), 0, "Produto fora de estoque: " + product.Title),
+                AssertionConcern.AssertIsGreaterThan(price, 0, "Preço deve ser maior que zero"),
+                AssertionConcern.AssertIsGreaterThan(quantity, 0, "Quantidade deve ser maior que zero")
+            );
+        }
     }
 }

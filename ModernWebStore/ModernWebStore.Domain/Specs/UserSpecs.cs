@@ -12,5 +12,10 @@ namespace ModernWebStore.Domain.Specs
             string encriptedPassword = StringHelper.Encrypt(password);
             return x => x.Email == email && x.Password == encriptedPassword;
         }
+
+        public static Expression<Func<User, bool>> GetByEmail(string email)
+        {
+            return x => x.Email == email;
+        }
     }
 }

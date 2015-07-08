@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Scopes\UserScopeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specs\ProductSpecTests.cs" />
     <Compile Include="Specs\UserSpecTests.cs" />
   </ItemGroup>
   <ItemGroup>

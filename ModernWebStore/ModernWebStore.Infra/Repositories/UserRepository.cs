@@ -26,5 +26,12 @@ namespace ModernWebStore.Infra.Repositories
                 .Where(UserSpecs.AuthenticateUser(email, password))
                 .FirstOrDefault();
         }
+
+        public User GetByEmail(string email)
+        {
+            return _context.Users
+                .Where(UserSpecs.GetByEmail(email))
+                .FirstOrDefault();
+        }
     }
 }

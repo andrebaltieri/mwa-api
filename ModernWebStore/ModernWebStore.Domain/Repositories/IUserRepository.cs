@@ -6,5 +6,6 @@ namespace ModernWebStore.Domain.Repositories
     {
         void Register(User user);
         User Authenticate(string email, string password);
+        User GetByEmail(string email);
     }
 }

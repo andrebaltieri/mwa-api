@@ -43,6 +43,8 @@
     <Compile Include="Commands\CategoryCommands\CreateCategoryCommand.cs" />
     <Compile Include="Commands\CategoryCommands\DeleteCategoryCommand.cs" />
     <Compile Include="Commands\CategoryCommands\EditCategoryCommand.cs" />
+    <Compile Include="Commands\OrderCommands\CreateOrderCommand.cs" />
+    <Compile Include="Commands\OrderCommands\CreateOrderItemCommand.cs" />
     <Compile Include="Commands\ProductCommands\CreateProductCommand.cs" />
     <Compile Include="Commands\ProductCommands\UpdateProductInfoCommand.cs" />
     <Compile Include="Commands\UserCommands\RegisterUserCommand.cs" />
@@ -51,17 +53,23 @@
     <Compile Include="Entities\OrderItem.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Enums\EOrderStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ICategoryRepository.cs" />
+    <Compile Include="Repositories\IOrderRepository.cs" />
     <Compile Include="Repositories\IProductRepository.cs" />
     <Compile Include="Repositories\IUserRepository.cs" />
     <Compile Include="Scopes\CategoryScopes.cs" />
+    <Compile Include="Scopes\OrderItemScopes.cs" />
+    <Compile Include="Scopes\OrderScopes.cs" />
     <Compile Include="Scopes\ProductScopes.cs" />
     <Compile Include="Scopes\UserScopes.cs" />
     <Compile Include="Services\ICategoryApplicationService.cs" />
+    <Compile Include="Services\IOrderApplicationService.cs" />
     <Compile Include="Services\IProductApplicationService.cs" />
     <Compile Include="Services\IUserApplicationService.cs" />
     <Compile Include="Specs\CategorySpecs.cs" />
+    <Compile Include="Specs\OrderSpecs.cs" />
     <Compile Include="Specs\ProductSpecs.cs" />
     <Compile Include="Specs\UserSpecs.cs" />
   </ItemGroup>
