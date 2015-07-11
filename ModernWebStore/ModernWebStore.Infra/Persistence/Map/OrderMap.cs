@@ -16,6 +16,8 @@ namespace ModernWebStore.Infra.Persistence.Map
             Ignore(x => x.Total);
 
             HasRequired(x => x.User);
+            HasMany(x => x.OrderItems)
+                .WithRequired(x => x.Order);
         }
     }
 }

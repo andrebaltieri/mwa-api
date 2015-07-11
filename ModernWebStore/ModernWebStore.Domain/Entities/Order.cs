@@ -21,7 +21,7 @@ namespace ModernWebStore.Domain.Entities
 
         public int Id { get; private set; }
         public DateTime Date { get; private set; }
-        public IEnumerable<OrderItem> OrderItems
+        public ICollection<OrderItem> OrderItems
         {
             get { return _orderItems; }
             private set { _orderItems = new List<OrderItem>(value); }

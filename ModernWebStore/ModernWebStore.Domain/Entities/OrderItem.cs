@@ -14,7 +14,7 @@ namespace ModernWebStore.Domain.Entities
         public Product Product { get; private set; }
 
         public int OrderId { get; private set; }
-        public OrderItem Order { get; private set; }
+        public Order Order { get; private set; }
 
         public bool Register()
         {

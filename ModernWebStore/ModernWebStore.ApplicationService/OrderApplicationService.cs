@@ -45,6 +45,7 @@ namespace ModernWebStore.ApplicationService
 
             var order = new Order(orderItems, user.Id);
             order.Place();
+            _orderRepository.Create(order);
 
             if (Commit())
                 return order;
