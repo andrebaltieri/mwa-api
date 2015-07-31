@@ -25,6 +25,8 @@ namespace ModernWebStore.Infra.Persistence.Map
                 .HasMaxLength(60)
                 .IsRequired();
 
+            Property(x => x.Image);
+
             HasRequired(x => x.Category);
         }
     }

@@ -1,0 +1,36 @@
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Modern Web Store</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav">
+        <li ng-class="{ active: selected == 'home' || selected == undefined }">
+          <a href="#/" ng-click="selected = 'home'">Home</a>
+        </li>
+        <li ng-class="{ active: selected == 'users' }">
+          <a href="#/users" ng-click="selected = 'users'">Usuários</a>
+        </li>
+        <li ng-class="{ active: selected == 'categories' }">
+          <a href="#/categories" ng-click="selected = 'categories'">Categorias</a>
+        </li>
+        <li ng-class="{ active: selected == 'products' }">
+          <a href="#/products" ng-click="selected = 'products'">Produtos</a>
+        </li>
+        <li ng-class="{ active: selected == 'orders' }">
+          <a href="#/orders" ng-click="selected = 'orders'">Pedidos</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#/">Olá, <em>André Baltieri</em></a></li>
+        <li><a href="#/logout">Sair</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

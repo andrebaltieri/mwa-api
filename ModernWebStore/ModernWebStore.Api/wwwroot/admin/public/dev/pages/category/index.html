@@ -1,0 +1,19 @@
+﻿<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-center">Nome</th>
+            <th class="text-center">Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="category in vm.categories">
+            <td>{{ category.title }}</td>
+            <td class="text-center">
+                <div class="btn-group" role="group" aria-label="...">
+                    <a href="#/categories/edit/{{ category.id }}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
+                    <a href="#/categories/delete/{{ category.id }}" class="btn btn-sm btn-danger"><i class="fa fa-remove"></i></a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

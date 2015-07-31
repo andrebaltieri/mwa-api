@@ -1,0 +1,16 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-center">E-mail</th>
+            <th class="text-center">Administrador</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in vm.users">
+            <td>{{ user.email }}</td>
+            <td class="text-center">
+                <i class="fa fa-star text-warning" ng-show="user.isAdmin"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>

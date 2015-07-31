@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html lang="pt-BR" ng-app="mwa">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Bem vindo a Modern Web Store!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modern Web Store - Setor Administrativo</title>
+
+    <link rel="icon" type="image/icon" href="assets/imgs/favicon.ico">
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="../../bower_components/bootswatch/paper/bootstrap.css">
+    <link rel="stylesheet" href="../../bower_components/animate.css/animate.css">
+    <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../../bower_components/toastr/toastr.css" />
+</head>
+<body>
+    <div ng-include="'pages/shared/headbar.html'"></div>
+
+    <div class="container" ng-view></div>
+
+    <script src="../../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../../bower_components/toastr/toastr.js"></script>
+    <script src="../../bower_components/angular/angular.js"></script>
+    <script src="../../bower_components/angular-route/angular-route.js"></script>
+
+    <script src="../../app/app.js"></script>
+    <script src="../../app/routes.js"></script>
+    <script src="../../app/config.js"></script>
+
+    <script src="../../app/factories/account-factory.js"></script>
+    <script src="../../app/factories/product-factory.js"></script>
+
+    <script src="../../app/controllers/account/login-controller.js"></script>
+    <script src="../../app/controllers/account/logout-controller.js"></script>
+    <script src="../../app/controllers/home/home-controller.js"></script>
+    <script src="../../app/controllers/store/cart-controller.js"></script>
+</body>
+</html>

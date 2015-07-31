@@ -3,6 +3,7 @@ using ModernWebStore.Domain.Entities;
 using ModernWebStore.Domain.Repositories;
 using ModernWebStore.Domain.Services;
 using ModernWebStore.Infra.Persistence;
+using System.Collections.Generic;
 
 namespace ModernWebStore.ApplicationService
 {
@@ -30,6 +31,11 @@ namespace ModernWebStore.ApplicationService
         public User Authenticate(string username, string password)
         {
             return _repository.Authenticate(username, password);
+        }
+
+        public List<User> List()
+        {
+            return _repository.List();
         }
     }
 }

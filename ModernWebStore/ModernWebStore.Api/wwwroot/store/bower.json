@@ -1,0 +1,24 @@
+{
+  "name": "mwa-front-admin",
+  "version": "0.0.0",
+  "homepage": "https://github.com/andrebaltieri/mwa-front-admin",
+  "authors": [
+    "Andre Baltieri <andrebaltieri@hotmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.2",
+    "angular-route": "~1.4.2",
+    "bootswatch": "~3.3.5",
+    "font-awesome": "~4.3.0",
+    "animate.css": "~3.3.0",
+    "toastr": "~2.1.1"
+  }
+}

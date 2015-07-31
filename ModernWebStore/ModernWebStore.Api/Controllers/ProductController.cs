@@ -53,6 +53,7 @@ namespace ModernWebStore.Api.Controllers
                 category: (int)body.category,
                 description: (string)body.description,
                 price: (decimal)body.price,
+                image: (string)body.image,
                 quantityOnHand: (int)body.quantityOnHand
             );
 

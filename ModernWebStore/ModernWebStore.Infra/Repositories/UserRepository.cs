@@ -2,6 +2,7 @@
 using ModernWebStore.Domain.Repositories;
 using ModernWebStore.Domain.Specs;
 using ModernWebStore.Infra.Persistence.DataContexts;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ModernWebStore.Infra.Repositories
@@ -32,6 +33,11 @@ namespace ModernWebStore.Infra.Repositories
             return _context.Users
                 .Where(UserSpecs.GetByEmail(email))
                 .FirstOrDefault();
+        }
+
+        public List<User> List()
+        {
+            return _context.Users.OrderBy(x => x.Email).ToList();
         }
     }
 }
