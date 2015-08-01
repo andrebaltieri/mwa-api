@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
     'use strict';
     angular.module('mwa').factory('AccountFactory', AccountFactory);
 
@@ -11,7 +11,10 @@
 
         function login(data) {
             var dt = "grant_type=password&username=" + data.email + "&password=" + data.password;
-            return $http.post(SETTINGS.SERVICE_URL + 'api/security/token', dt, { headers: {'Content-Type': 'application/x-www-form-urlencoded'} });
+            var url = SETTINGS.SERVICE_URL + 'api/security/token';
+            var header = { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } };
+
+            return $http.post(url, dt, header);
         }
     }
 })();

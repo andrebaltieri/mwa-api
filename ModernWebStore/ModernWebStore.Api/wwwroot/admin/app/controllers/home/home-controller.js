@@ -1,16 +1,16 @@
-(function () {
+﻿(function () {
     'use strict';
     angular.module('mwa').controller('HomeCtrl', HomeCtrl);
 
-    HomeCtrl.$inject = ['SETTINGS'];
+    HomeCtrl.$inject = [];
 
-    function HomeCtrl(SETTINGS) {
+    function HomeCtrl() {
         var vm = this;
-
+        
         activate();
 
         function activate() {
 
         }
-    }
+    };
 })();

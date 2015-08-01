@@ -1,18 +1,16 @@
-(function () {
+﻿(function () {
     'use strict';
     angular.module('mwa').controller('LoginCtrl', LoginCtrl);
 
-    LoginCtrl.$inject = ['$rootScope', '$location', 'AccountFactory', 'SETTINGS'];
+    LoginCtrl.$inject = ['$location', '$rootScope', 'SETTINGS', 'AccountFactory'];
 
-    function LoginCtrl($rootScope, $location, AccountFactory, SETTINGS) {
+    function LoginCtrl($location, $rootScope, SETTINGS, AccountFactory) {
         var vm = this;
-
         vm.login = {
-            email: "",
-            password: ""
+            email: '',
+            password: ''
         };
-
-        vm.submit = submit;
+        vm.submit = login;
 
         activate();
 
@@ -20,7 +18,7 @@
 
         }
 
-        function submit() {
+        function login() {
             AccountFactory.login(vm.login)
                 .success(success)
                 .catch(fail);
@@ -37,5 +35,5 @@
                 toastr.error(error.data.error_description, 'Falha na autenticação');
             }
         }
-    }
+    };
 })();

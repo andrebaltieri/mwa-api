@@ -1,15 +1,16 @@
-(function () {
+﻿(function () {
     'use strict';
+
     angular.module('mwa').constant('SETTINGS', {
-        "VERSION": "0.0.1",
-        "CURR_ENV": "dev",
-        "AUTH_TOKEN": "mwa-token",
-        "AUTH_USER": "mwa-user",
-        //"SERVICE_URL": "http://abt-mwa-api.azurewebsites.net/"
-        "SERVICE_URL": "/"
+        'VERSION': '0.0.1',
+        'CURR_ENV': 'dev',
+        'AUTH_TOKEN': 'mwa-token',
+        'AUTH_USER': 'mwa-user',
+        'SERVICE_URL': '/'
+        // 'SERVICE_URL': 'http://minhaapi.azurewebsites.net/'
     });
 
-    angular.module('mwa').run(function ($rootScope, $location, $injector, SETTINGS) {
+    angular.module('mwa').run(function ($rootScope, $location, SETTINGS) {
         var token = sessionStorage.getItem(SETTINGS.AUTH_TOKEN);
         var user = sessionStorage.getItem(SETTINGS.AUTH_USER);
 
@@ -29,7 +30,7 @@
 
         $rootScope.$on("$routeChangeStart", function (event, next, current) {
             if ($rootScope.user == null) {
-                $location.path("/login");
+                $location.path('/login');
             }
         });
     });

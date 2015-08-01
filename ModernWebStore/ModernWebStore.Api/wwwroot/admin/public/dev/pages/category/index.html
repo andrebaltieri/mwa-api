@@ -1,19 +1,58 @@
-﻿<table class="table table-striped">
-    <thead>
-        <tr>
-            <th class="text-center">Nome</th>
-            <th class="text-center">Ação</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="category in vm.categories">
-            <td>{{ category.title }}</td>
-            <td class="text-center">
-                <div class="btn-group" role="group" aria-label="...">
-                    <a href="#/categories/edit/{{ category.id }}" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
-                    <a href="#/categories/delete/{{ category.id }}" class="btn btn-sm btn-danger"><i class="fa fa-remove"></i></a>
-                </div>
-            </td>
-        </tr>
-    </tbody>
-</table>
+﻿<h3 class="text-center">Categorias</h3>
+
+<div class="col-md-8">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-center">#</th>
+                <th class="text-center">Categoria</th>
+                <th class="text-center"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="category in vm.categories">
+                <td class="text-center">{{ category.id }}</td>
+                <td>{{ category.title }}</td>
+                <td class="text-center">
+                    <div class="button-group">
+                        <button class="btn btn-default btn-sm" ng-click="vm.loadCategory(category)"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-danger btn-sm" ng-click="vm.removeCategory(category)"><i class="fa fa-remove"></i></button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="col-md-4">
+    <div class="panel panel-default">
+        <div class="panel-heading text-center">Manutenção da Categoria</div>
+        <div class="panel-body">
+            <div class="form-group" ng-class="{ 'has-error' : title.$invalid }">
+                <label for="email">Title</label>
+                <input ng-model="vm.category.title"
+                       ng-minlength="3"
+                       ng-maxlength="20"
+                       type="text"
+                       class="form-control"
+                       id="title"
+                       name="title"
+                       placeholder="Título da Categoria"
+                       required />
+            </div>
+
+            <button 
+                    type="button" 
+                    class="btn btn-primary btn-block" 
+                    ng-disabled="vm.category.title == ''"
+                    ng-click="vm.saveCategory()">
+                Salvar
+            </button>
+            <button type="button"
+                    class="btn btn-default btn-block"
+                    ng-show="vm.category.id != 0"
+                    ng-click="vm.cancel()">
+                Cancelar
+            </button>
+        </div>
+    </div>

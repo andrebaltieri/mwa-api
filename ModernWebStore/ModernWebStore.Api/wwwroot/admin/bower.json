@@ -1,7 +1,7 @@
 {
-  "name": "mwa-front-admin",
+  "name": "admin",
   "version": "0.0.0",
-  "homepage": "https://github.com/andrebaltieri/mwa-front-admin",
+  "homepage": "https://github.com/andrebaltieri/mwa-api",
   "authors": [
     "Andre Baltieri <andrebaltieri@hotmail.com>"
   ],
@@ -14,11 +14,12 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.4.2",
-    "angular-route": "~1.4.2",
     "bootswatch": "~3.3.5",
-    "font-awesome": "~4.3.0",
     "animate.css": "~3.3.0",
-    "toastr": "~2.1.1"
+    "font-awesome": "~4.4.0",
+    "toastr": "~2.1.1",
+    "angular": "~1.4.3",
+    "angular-route": "~1.4.3",
+    "ngImgCrop": "~0.3.2"
   }
 }

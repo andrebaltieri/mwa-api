@@ -1,0 +1,38 @@
+﻿<h3>Produtos</h3>
+
+<a href="#/products/create" class="btn btn-success btn-lg pull-right">
+    <i class="fa fa-plus"></i> Adicionar
+</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-center">#</th>
+            <th class="text-center">Imagem</th>
+            <th class="text-center">Produto</th>
+            <th class="text-center">Preço</th>
+            <th class="text-center">Qtd</th>
+            <th class="text-center"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="6">
+                <input type="text" class="form-control" ng-model="filter" value="" placeholder="Filtrar..." />
+            </td>
+        </tr>
+        <tr ng-repeat="product in vm.products | filter: filter">
+            <td class="text-center">{{ product.id }}</td>
+            <td class="text-center"><img ng-src="{{ product.image }}" alt="{{ product.title }}" width="48" /></td>
+            <td class="text-center">{{ product.title }}</td>
+            <td class="text-center">{{ product.price | currency: 'BRL' }}</td>
+            <td class="text-center">{{ product.quantityOnHand }}</td>
+            <td class="text-center">
+                <div class="btn-group">
+                    <a href="#/products/edit/{{ product.id }}" class="btn btn-group btn-default btn-sm"><i class="fa fa-edit"></i></a>
+                    <a href="#/products/remove/{{ product.id }}" class="btn btn-group btn-danger btn-sm"><i class="fa fa-remove"></i></a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
