@@ -1,5 +1,6 @@
-(function () {
+﻿(function () {
     'use strict';
+
     angular.module('mwa').config(function ($routeProvider) {
         $routeProvider
             .when('/', {
@@ -17,20 +18,30 @@
                 controllerAs: 'vm',
                 templateUrl: 'pages/account/login.html'
             })
-            .when('/users', {
-                controller: 'UserCtrl',
-                controllerAs: 'vm',
-                templateUrl: 'pages/user/index.html'
-            })
             .when('/categories', {
-                controller: 'CategoryListCtrl',
+                controller: 'CategoryCtrl',
                 controllerAs: 'vm',
                 templateUrl: 'pages/category/index.html'
             })
-            .when('/categories/edit/:id', {
-                controller: 'CategoryEditCtrl',
+            .when('/products', {
+                controller: 'ProductListCtrl',
                 controllerAs: 'vm',
-                templateUrl: 'pages/category/edit.html'
+                templateUrl: 'pages/product/index.html'
+            })
+            .when('/products/create', {
+                controller: 'ProductCreateCtrl',
+                controllerAs: 'vm',
+                templateUrl: 'pages/product/create.html'
+            })
+            .when('/products/edit/:id', {
+                controller: 'ProductEditCtrl',
+                controllerAs: 'vm',
+                templateUrl: 'pages/product/edit.html'
+            })
+            .when('/products/remove/:id', {
+                controller: 'ProductRemoveCtrl',
+                controllerAs: 'vm',
+                templateUrl: 'pages/product/edit.html'
             });
     });
 })();

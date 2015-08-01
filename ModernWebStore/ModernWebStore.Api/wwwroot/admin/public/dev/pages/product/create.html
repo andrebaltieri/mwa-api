@@ -1,0 +1,66 @@
+﻿<h3>Novo produto</h3>
+
+<div class="form-group">
+    <label>Produto</label>
+    <input ng-model="vm.product.title"          
+           type="text"
+           class="form-control"
+           required />
+</div>
+
+<div class="form-group">
+    <label>Categoria</label>
+    <select ng-model="vm.product.category" class="form-control">
+        <option value="{{ category.id }}" ng-repeat="category in vm.categories">{{ category.title }}</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="email">Descrição</label>
+    <input ng-model="vm.product.description"
+           type="text"
+           class="form-control"
+           required />
+</div>
+
+<div class="form-group">
+    <label>Preço</label>
+    <input ng-model="vm.product.price"
+           type="number"
+           class="form-control"
+           required />
+</div>
+
+<div class="form-group">
+    <label>Quantidade em Mãos</label>
+    <input ng-model="vm.product.quantityOnHand"
+           type="number"
+           class="form-control"
+           required />
+</div>
+
+<div class="text-center">
+    <span class="btn btn-default btn-file">
+        Selecione uma imagem... <input type="file" id="file" />
+    </span>
+</div>
+
+<br />
+<div class="clearfix"></div>
+
+<div class="cropArea">
+    <img-crop image="vm.product.image" area-type="square" result-image="vm.croppedImage"></img-crop>
+</div>
+
+<p class="text-center">
+    <img ng-src="{{ vm.croppedImage }}" />
+</p>
+
+<br />
+<div class="clearfix"></div>
+
+<p class="text-center">
+    <button class="btn btn-primary btn-lg" ng-click="vm.save()">
+        Salvar
+    </button>
+</p>

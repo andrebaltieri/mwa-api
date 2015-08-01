@@ -1,6 +1,4 @@
-(function(){
+﻿(function () {
     'use strict';
-
-    angular.module('mwa.directives', []);
-    angular.module('mwa', ['mwa.directives', 'ngRoute']);
+    angular.module('mwa', ['ngRoute', 'ngImgCrop']);
 })();

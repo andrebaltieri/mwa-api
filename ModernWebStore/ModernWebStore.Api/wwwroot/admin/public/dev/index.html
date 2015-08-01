@@ -1,5 +1,5 @@
-﻿<!doctype html>
-<html lang="pt-BR" ng-app="mwa">
+﻿<!DOCTYPE html>
+<html ng-app="mwa">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Modern Web Store - Setor Administrativo</title>
 
-    <link rel="icon" type="image/icon" href="assets/imgs/favicon.ico">
-
-    <!-- Page styles -->
     <link rel="stylesheet" href="../../bower_components/bootswatch/paper/bootstrap.css">
     <link rel="stylesheet" href="../../bower_components/animate.css/animate.css">
     <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="../../bower_components/toastr/toastr.css" />
+    <link rel="stylesheet" href="../../bower_components/ngImgCrop/compile/minified/ng-img-crop.css" />
+    <style>
+        .cropArea {
+            background: #f5f5f5;
+            overflow: hidden;
+            width: 100%;
+            height: 540px;
+            border: 1px dashed #0b97c4;
+        }
+    </style>
 </head>
 <body>
     <div ng-include="'pages/shared/headbar.html'"></div>
@@ -25,19 +32,22 @@
     <script src="../../bower_components/toastr/toastr.js"></script>
     <script src="../../bower_components/angular/angular.js"></script>
     <script src="../../bower_components/angular-route/angular-route.js"></script>
+    <script src="../../bower_components/ngImgCrop/compile/minified/ng-img-crop.js"></script>
 
     <script src="../../app/app.js"></script>
     <script src="../../app/routes.js"></script>
     <script src="../../app/config.js"></script>
 
     <script src="../../app/factories/account-factory.js"></script>
-    <script src="../../app/factories/user-factory.js"></script>
     <script src="../../app/factories/category-factory.js"></script>
+    <script src="../../app/factories/product-factory.js"></script>
 
+    <script src="../../app/controllers/home/home-controller.js"></script>
     <script src="../../app/controllers/account/login-controller.js"></script>
     <script src="../../app/controllers/account/logout-controller.js"></script>
-    <script src="../../app/controllers/home/home-controller.js"></script>
-    <script src="../../app/controllers/user/user-controller.js"></script>
-    <script src="../../app/controllers/category/category-list-controller.js"></script>
+    <script src="../../app/controllers/category/category-controller.js"></script>
+    <script src="../../app/controllers/product/product-list-controller.js"></script>
+    <script src="../../app/controllers/product/product-create-controller.js"></script>
+    <script src="../../app/controllers/product/product-edit-controller.js"></script>
 </body>
 </html>
